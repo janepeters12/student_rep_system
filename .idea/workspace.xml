@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e3fab7c-5394-4a3f-9590-abd91e78bca2" name="Default Changelist" comment="" />
+    <list default="true" id="3e3fab7c-5394-4a3f-9590-abd91e78bca2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturer/loginaslecturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/loginaslecturer.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1572950457968</updated>
       <workItem from="1572950466557" duration="999000" />
-      <workItem from="1572952998132" duration="771000" />
+      <workItem from="1572952998132" duration="2941000" />
     </task>
     <servers />
   </component>

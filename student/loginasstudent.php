@@ -27,7 +27,10 @@
    <div class="card blue" style="width: 50%;padding: 5%">
      <div class="card-content center">
        <div class="card-title white-text"  href="#" style="font-weight: bolder">Log In As Student</div>
-       <form>
+         <div class="white-text red">
+             <?php require("../database/connection.php") ?>
+         </div>
+         <form>
          <div class="row">
            <div class=" input-field col s12 m12 l12">
              <input type="text" class="validate" id="regno">
