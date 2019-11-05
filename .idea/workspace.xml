@@ -1,8 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3e3fab7c-5394-4a3f-9590-abd91e78bca2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1student.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/1student.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SAR.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/SAR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about us.html" beforeDir="false" afterPath="$PROJECT_DIR$/about us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addassignment_lecturer.html" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/addassignment_lecturer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addcourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addcourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addlecturer.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addlecturer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addnotes_lecturer.html" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/addnotes_lecturer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addstudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addstudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addunit.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addunit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/books.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookswithcap.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bookswithcap.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/materialize.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/materialize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/materialize.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/materialize.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-1.10.2.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jquery-1.10.2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/materialize.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/materialize.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturer.html" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginaslecturer.html" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/loginaslecturer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginasstudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/student/loginasstudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/materialize.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/materialize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student.html" beforeDir="false" afterPath="$PROJECT_DIR$/student/student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/students.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submitassignment.html" beforeDir="false" afterPath="$PROJECT_DIR$/student/submitassignment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viewassignment.html" beforeDir="false" afterPath="$PROJECT_DIR$/student/viewassignment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viewnotes.html" beforeDir="false" afterPath="$PROJECT_DIR$/student/viewnotes.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1TC3sVLwNpARaxGwK07F8zs0POj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/js" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\jpp\assets\js" />
+      <recent name="D:\laragon\www\jpp\assets\css" />
+      <recent name="D:\laragon\www\jpp\assets" />
+      <recent name="D:\laragon\www\jpp\admin" />
+      <recent name="D:\laragon\www\jpp\student" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e3fab7c-5394-4a3f-9590-abd91e78bca2" name="Default Changelist" comment="" />
+      <created>1572950457968</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572950457968</updated>
+      <workItem from="1572950466557" duration="999000" />
+      <workItem from="1572952998132" duration="442000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
