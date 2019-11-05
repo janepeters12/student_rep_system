@@ -15,9 +15,9 @@
     <!-- navbar -->
    <nav>
      <div class="nav-wrapper blue-grey">
-       <a href="admin.html" class="brand-logo">XTRAY</a>
+       <a href="admin.php" class="brand-logo">XTRAY</a>
        <ul class="right">
-         <li><a href="admin.html">Log Out</a></li>
+         <li><a href="admin.php">Log Out</a></li>
        </ul>
      </div>
    </nav>

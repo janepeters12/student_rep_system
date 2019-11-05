@@ -41,9 +41,9 @@
     <!-- navbar -->
    <nav>
      <div class="nav-wrapper blue-grey">
-       <a href="index.html" class="brand-logo">XTray</a>
+       <a href="index.php" class="brand-logo">XTray</a>
        <ul class="right">
-         <li><a href="index.html">Back Home</a></li>
+         <li><a href="index.php">Back Home</a></li>
        </ul>
      </div>
    </nav>

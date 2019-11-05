@@ -15,9 +15,9 @@
     <!-- navbar -->
    <nav>
      <div class="nav-wrapper blue-grey">
-       <a href="../index.html" class="brand-logo">XTRAY</a>
+       <a href="../index.php" class="brand-logo">XTRAY</a>
        <ul class="right">
-         <li><a href="../index.html">Log Out</a></li>
+         <li><a href="../index.php">Log Out</a></li>
        </ul>
      </div>
    </nav>
@@ -33,7 +33,7 @@
    <div class="row">
      <div class="col s12 m6 l6"> 
         <div class="center">
-            <a class="btn white black-text" href="addassignment_lecturer.html" style="font-weight: bolder; margin: 10%">Add Assisnments</a>
+            <a class="btn white black-text" href="addassignment_lecturer.php" style="font-weight: bolder; margin: 10%">Add Assisnments</a>
         </div>
         <table>
             <tr>
@@ -50,7 +50,7 @@
      </div>
      <div class="col s12 m6 l6"> 
         <div class="center">
-            <a class="btn white black-text" href="addnotes_lecturer.html" style="font-weight: bolder; margin: 10%">Add Notes</a>
+            <a class="btn white black-text" href="addnotes_lecturer.php" style="font-weight: bolder; margin: 10%">Add Notes</a>
         </div>
         <table>
             <tr>

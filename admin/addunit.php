@@ -15,9 +15,9 @@
     <!-- navbar -->
    <nav>
      <div class="nav-wrapper blue-grey">
-       <a href="admin.html" class="brand-logo">S.A.R</a>
+       <a href="admin.php" class="brand-logo">S.A.R</a>
        <ul class="right">
-         <li><a href="admin.html">Log Out</a></li>
+         <li><a href="admin.php">Log Out</a></li>
        </ul>
      </div>
    </nav>
@@ -50,7 +50,7 @@
             </div>
           <div class="btn blue-grey white-text">ADD</div>
           <div class="center">
-              <a class="btn white black-text" href="admin.html" style="font-weight: bolder; margin: 10%"> Save</a>
+              <a class="btn white black-text" href="admin.php" style="font-weight: bolder; margin: 10%"> Save</a>
           </div>
 
         </div>

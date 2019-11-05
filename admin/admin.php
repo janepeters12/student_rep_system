@@ -15,9 +15,9 @@
     <!-- navbar -->
    <nav>
      <div class="nav-wrapper blue-grey">
-       <a href="../index.html" class="brand-logo">XTRAY</a>
+       <a href="../index.php" class="brand-logo">XTRAY</a>
        <ul class="right">
-         <li><a href="../index.html">Log Out</a></li>
+         <li><a href="../index.php">Log Out</a></li>
        </ul>
      </div>
    </nav>
@@ -33,7 +33,7 @@
    <div class="row">
      <div class="col s12 m6 l6"> 
         <div class="center">
-            <a class="btn white black-text" href="addstudent.html" style="font-weight: bolder; margin: 10%">Add Student</a>
+            <a class="btn white black-text" href="addstudent.php" style="font-weight: bolder; margin: 10%">Add Student</a>
         </div>
         <table>
             <tr>
@@ -50,7 +50,7 @@
      </div>
     <div class="col s12 m6 l6"> 
       <div class="center">
-          <a class="btn white black-text" href="addlecturer.html" style="font-weight: bolder; margin: 10%">Add Lecturer</a>
+          <a class="btn white black-text" href="addlecturer.php" style="font-weight: bolder; margin: 10%">Add Lecturer</a>
       </div>
       <table>
           <tr>
@@ -65,7 +65,7 @@
     </div>
      <div class="col s12 m6 l6"> 
       <div class="center">
-          <a class="btn white black-text" href="addcourse.html" style="font-weight: bolder; margin: 10%">Add Course</a>
+          <a class="btn white black-text" href="addcourse.php" style="font-weight: bolder; margin: 10%">Add Course</a>
       </div>
       <table>
           <tr>
@@ -79,7 +79,7 @@
       </div>
       <div class="col s12 m6 l6"> 
           <div class="center">
-              <a class="btn white black-text" href="addunit.html" style="font-weight: bolder; margin: 10%">Add Unit</a>
+              <a class="btn white black-text" href="addunit.php" style="font-weight: bolder; margin: 10%">Add Unit</a>
           </div>
           <table>
               <tr>

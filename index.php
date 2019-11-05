@@ -27,9 +27,9 @@
     <!-- navbar -->
    <nav>
      <div class="nav-wrapper blue-grey">
-       <a href="index.html" class="brand-logo">XTRAY</a>
+       <a href="index.php" class="brand-logo">XTRAY</a>
        <ul class="right">
-         <li><a href="about us.html">About us</a></li>
+         <li><a href="about us.php">About us</a></li>
        </ul>
      </div>
    </nav>
@@ -39,8 +39,8 @@
    <div class="card blue" style="width: 50%;padding: 5%">
      <div class="card-content center">
        <div class="card-title white-text"  href="#" style="font-weight: bolder">Log In</div>
-       <a class="btn white black-text" href="student/loginasstudent.html" style="font-weight: bolder; margin: 10%">Student</a>
-       <a class="btn white black-text " href="lecturer/loginaslecturer.html" style="font-weight: bolder; margin: 10%">Lecturer</a>
+       <a class="btn white black-text" href="student/loginasstudent.php" style="font-weight: bolder; margin: 10%">Student</a>
+       <a class="btn white black-text " href="lecturer/loginaslecturer.php" style="font-weight: bolder; margin: 10%">Lecturer</a>
      </div>
    </div>
   </center>

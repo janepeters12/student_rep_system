@@ -15,7 +15,7 @@
     <!-- navbar -->
    <nav>
      <div class="nav-wrapper blue-grey">
-       <a href="../index.html" class="brand-logo">XTRAY</a>
+       <a href="../index.php" class="brand-logo">XTRAY</a>
        <ul class="right">
          <li><a href="../about%20us.html">About us</a></li>
        </ul>
@@ -38,7 +38,7 @@
               <label for="password">Password</label>
            </div>
            <div class="col s12 m12 l12">
-              <a class="btn white black-text" href="student.html" style="font-weight: bolder; margin: 10%">Log in</a>
+              <a class="btn white black-text" href="student.php" style="font-weight: bolder; margin: 10%">Log in</a>
            </div>
 
          </div>

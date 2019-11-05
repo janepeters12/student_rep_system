@@ -15,23 +15,23 @@
     <!-- navbar -->
    <nav>
      <div class="nav-wrapper blue-grey">
-       <a href="../index.html" class="brand-logo">XTRAY</a>
+       <a href="../index.php" class="brand-logo">XTRAY</a>
        <ul class="right">
-         <li><a href="../index.html">Log Out</a></li>
+         <li><a href="../index.php">Log Out</a></li>
        </ul>
      </div>
    </nav>
    <div class="row">
         <div class="col s4 m4 l4">
-            <p style="font-weight: bolder">Nixon Amuomo</p>
-            <p style="font-weight: bolder">001567</p>
+            <p style="font-weight: bolder">Jane Peter</p>
+            <p style="font-weight: bolder">CSC/004/2017</p>
             
         </div>
  
    <center>
         <div class="card blue" style="width: 50%;padding: 15%">
           <div class="card-content center">
-            <div class="card-title white-text"  href="#" style="font-weight: bolder; ">NOTES</div>
+            <div class="card-title white-text"  href="#" style="font-weight: bolder; ">ASSIGNMENT</div>
             <form>
               <div class="row">
                 <div class=" input-field col s12 m12 l12">
@@ -39,9 +39,6 @@
                   
                  </div>
                  
-              </div>
-              <div class="center">
-                  <a class="btn white black-text" href="lecturer.html" style="font-weight: bolder; margin: 10%"> Save</a>
               </div>
             </form>
             

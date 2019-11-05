@@ -15,41 +15,41 @@
     <!-- navbar -->
    <nav>
      <div class="nav-wrapper blue-grey">
-       <a href="admin.html" class="brand-logo">S.A.R</a>
+       <a href="../index.php" class="brand-logo">XTRAY</a>
        <ul class="right">
-         <li><a href="admin.html">Log Out</a></li>
+         <li><a href="../index.php">Log Out</a></li>
        </ul>
      </div>
    </nav>
-   
+   <div class="row">
+        <div class="col s4 m4 l4">
+            <p style="font-weight: bolder">Nixon Amuomo</p>
+            <p style="font-weight: bolder">001567</p>
+            
+        </div>
  
    <center>
-        <div class="card blue" style="width: 50%;padding: 10%">
+        <div class="card blue" style="width: 50%;padding: 15%">
           <div class="card-content center">
-            <div class="card-title white-text"  href="#" style="font-weight: bolder; ">Add Student</div>
+            <div class="card-title white-text"  href="#" style="font-weight: bolder; ">ASSIGNMENT</div>
             <form>
-            <div class="row">
-            <div class=" input-field col s12 m12 l12">
-            <input type="text" class="validate" id="name">
-            <label for="name">Name</label>
-            </div>
-            <div class=" input-field col s12 m12 l12">
-            <input type="text" class="validate" id="regno">
-            <label for="regno">Reg No</label>
-            </div>
-            <div class=" input-field col s12 m12 l12">
-            <input type="text" class="validate" id="course">
-            <label for="course">Course</label>
-            </div>
+              <div class="row">
+                <div class=" input-field col s12 m12 l12">
+                  <input type="file" class="validate" id="choose file">
+                 
+                 </div>
+                 <div class="center">
+                    <a class="btn white black-text" href="lecturer.php" style="font-weight: bolder; margin: 10%"> Save</a>
+                </div>
+                 
+              </div>
             </form>
             
           </div>
         </div>
-       
     </center>
 
        <div class="col s4 m4 l4">
-
             <a href="#"></a>
         </div>
 
@@ -60,9 +60,7 @@
    </div>
 
     <!--JavaScript at end of body for optimized loading-->
-   <script type="text/javascript"src="../assets/jquery-1.10.2.js"></script>
-   <script src="../assets/materialize.js"></script>
-   <script src="../assets/SAR.js"></script>
+    <script type="text/javascript" src="../assets/js/materialize.min.js"></script>
   </body>
 </html>
       
