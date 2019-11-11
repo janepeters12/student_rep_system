@@ -28,26 +28,40 @@
     <div class="card blue" style="width: 50%;padding: 5%">
         <div class="card-content center">
             <div class="card-title white-text" href="#" style="font-weight: bolder">Log In As Lecturer</div>
-            <?php
-            $xtray_db_connection = new ConnectionClass();
-            $xtray_db_connection->connect();
-
-            ?>
-            <form>
+<!--            --><?php
+//            $xtray_db_connection = new ConnectionClass();
+//            $xtray_db_connection->connect();
+//
+//            $msg = '';
+//
+//            if (isset($_POST['login'])) {
+//                $username = mysqli_real_escape_string($_POST['username']);
+//                $password = mysqli_real_escape_string($_POST['password']);
+//                echo $username . " " . $password;
+//
+//                $xtray_functions = new FunctionsClass();
+//                $xtray_functions->login($username, $password);
+//            }
+//
+//            ?>
+            <form action="loginaslecturer.php" method="post">
                 <div class="row">
                     <div class=" input-field col s12 m12 l12">
-                        <input type="text" class="validate" id="regno">
+                        <input name="username" type="text" class="validate" id="regno" required>
                         <label for="regno">Staff No</label>
                     </div>
                     <div class=" input-field col s12 m12 l12">
-                        <input type="password" class="validate" id="Password">
+                        <input name="password" type="password" class="validate" id="Password" required>
                         <label for="Password">Password</label>
                     </div>
                     <div class="col s12 m12 l12">
-                        <a class="btn white black-text" href="lecturer.php" style="font-weight: bolder; margin: 10%">Log
-                            in</a>
+<!--                        <button name="login" type="submit" class="btn white black-text"-->
+<!--                                style="font-weight: bolder; margin: 10%">Log in-->
+<!--                        </button>-->
+                        <a href="lecturer.php" class="btn white black-text"
+                                style="font-weight: bolder; margin: 10%">Log in
+                        </a>
                     </div>
-
                 </div>
             </form>
 
@@ -59,4 +73,3 @@
 <script type="text/javascript" src="../assets/js/materialize.min.js"></script>
 </body>
 </html>
-      

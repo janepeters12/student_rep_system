@@ -24,6 +24,6 @@ class ConnectionClass
         if (!$connection) {
             die($error_start_tag . "Connection failed: " . mysqli_connect_error()) . $end_tag;
         }
-        echo $success_start_tag . "Connected successfully" . $end_tag;
+//        echo $success_start_tag . "Connected successfully" . $end_tag;
     }
 }
