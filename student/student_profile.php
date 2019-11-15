@@ -1,3 +1,10 @@
+<?php
+session_start();
+//access functions
+require('../database/FunctionClass.php');
+$xtray_functions = new FunctionClass();
+$sid = $_SESSION['sid'];
+?>
 <!DOCTYPE html>
 <html lang "en-US">
 
@@ -37,9 +44,19 @@
 </header>
 <main>
     <div class="no-pad-top section">
-        <a class="blue-grey btn right">
-            Logout
-        </a>
+        <center>
+            <div class="row" style="width: 50%">
+                <div class="col s12 m12 l12 card blue">
+                    <div class="card-content center">
+                        <div class="white-text" style="font-weight: bolder; ">Welcome
+                            <?php
+                            $xtray_functions->get_student_name($sid);
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
     </div>
 </main>
 

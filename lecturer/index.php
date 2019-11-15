@@ -1,3 +1,9 @@
+<?php
+//access functions
+require('../database/FunctionClass.php');
+$xtray_functions = new FunctionClass();
+?>
+
 <!DOCTYPE html>
 <html lang "en-US">
 
@@ -29,28 +35,39 @@
 <!-- login buttons card -->
 <center>
     <div class="card blue" style="width: 50%;padding: 5%">
+        <?php
+        //logging in
+        if (isset($_POST['login'])) {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $role = "lecturer";
+            if (empty($username) || empty($password)) {
+                echo "<div class='red white-text'>Input All Fields Before Submitting</div>";
+            } else {
+                $xtray_functions->login($username, $password, $role);
+            }
+        }
+        ?>
+
         <div class="card-content center">
-            <div class="card-title white-text" href="#" style="font-weight: bolder">Log In As Lecturer</div>
+            <div class="card-title white-text" style="font-weight: bolder">Log In As Lecturer</div>
             <form action="index.php" method="post">
                 <div class="row">
                     <div class=" input-field col s12 m12 l12">
                         <i class="material-icons prefix white-text">account_circle</i>
-                        <input class="white-text" name="username" type="text" class="validate" id="staffno" required>
+                        <input class="white-text validate" name="username" type="text" id="staffno" required>
                         <label class="white-text" for="staffno">Staff No</label>
                     </div>
                     <div class=" input-field col s12 m12 l12">
                         <i class="material-icons prefix white-text">visibility</i>
-                        <input class="white-text" name="password" type="password" class="validate" id="Password"
+                        <input class="white-text validate" name="password" type="password" id="Password"
                                required>
                         <label class="white-text" for="Password">Password</label>
                     </div>
                     <div class="col s12 m12 l12">
-                        <!--                        <button name="login" type="submit" class="btn white black-text"-->
-                        <!--                                style="font-weight: bolder; margin: 10%">Log in-->
-                        <!--                        </button>-->
-                        <a href="lecturer_profile.php" class="btn white black-text"
-                           style="font-weight: bolder; margin: 10%">Log in
-                        </a>
+                        <button type="submit" name="login" class="btn white black-text"
+                                style="font-weight: bolder; margin: 10%"> Login
+                        </button>
                     </div>
                 </div>
             </form>

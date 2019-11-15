@@ -1,3 +1,11 @@
+<?php
+session_start();
+//access functions
+require('../database/FunctionClass.php');
+$xtray_functions = new FunctionClass();
+$sid = $_SESSION['sid'];
+?>
+
 <!DOCTYPE html>
 <html lang "en-US">
 

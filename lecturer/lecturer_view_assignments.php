@@ -1,3 +1,11 @@
+<?php
+session_start();
+//access functions
+require('../database/FunctionClass.php');
+$xtray_functions = new FunctionClass();
+$lid = $_SESSION['lid'];
+?>
+
 <!DOCTYPE html>
 <html lang "en-US">
 
