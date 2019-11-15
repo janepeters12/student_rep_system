@@ -64,7 +64,8 @@ $aid = $_SESSION['aid'];
                         <a class="collapsible-header">Units<i class="material-icons">arrow_drop_down</i></a>
                         <div class="collapsible-body">
                             <ul>
-                                <li><a href="admin_view_unit.php" style="background-color: #2196F3; color:  white;">View Units</a></li>
+                                <li><a href="admin_view_unit.php" style="background-color: #2196F3; color:  white;">View
+                                        Units</a></li>
                                 <li><a href="admin_add_unit.php">Add Unit</a></li>
                             </ul>
                         </div>
@@ -82,19 +83,22 @@ $aid = $_SESSION['aid'];
 <main>
     <div class="no-pad-top section">
         <div class="center">
-            <a class="btn white black-text" href="admin_add_unit.php" style="font-weight: bolder; margin: 20px">Add Unit</a>
+            <a class="btn white black-text" href="admin_add_unit.php" style="font-weight: bolder; margin: 20px">Add
+                Unit</a>
         </div>
         <table>
+            <thead>
             <tr>
                 <th>Name</th>
                 <th>Course</th>
                 <th>Lecturer</th>
             </tr>
-            <tr>
-                <td>COM313</td>
-                <td>Computer Science</td>
-                <td>Nixon Amuomo</td>
-            </tr>
+            </thead>
+            <tbody>
+            <?php
+            $xtray_functions->admin_view_units();
+            ?>
+            </tbody>
         </table>
     </div>
 </main>

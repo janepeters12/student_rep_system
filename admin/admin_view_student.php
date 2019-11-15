@@ -86,16 +86,18 @@ $aid = $_SESSION['aid'];
                 Student</a>
         </div>
         <table>
+            <thead>
             <tr>
                 <th>Name</th>
                 <th>Reg No</th>
                 <th>Course</th>
             </tr>
-            <tr>
-                <td>Jane Peter</td>
-                <td>CSC/004/2017</td>
-                <td>Computer Science</td>
-            </tr>
+            </thead>
+            <tbody>
+            <?php
+            $xtray_functions->admin_view_students();
+            ?>
+            </tbody>
         </table>
 
     </div>

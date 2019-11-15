@@ -89,7 +89,7 @@ class FunctionClass
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
-                echo $row['lecturer_name'];
+                return $row['lecturer_name'];
             }
         } else {
             echo "error";
@@ -111,4 +111,97 @@ class FunctionClass
         }
     }
 
+    public function admin_view_students()
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT student_name,student_reg_no,student_course FROM student";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr><td>" .
+                    $row['student_name'] .
+                    "</td><td>" .
+                    $row['student_reg_no'] .
+                    "</td><td>" .
+                    $this->get_course_name($row['student_course']) .
+                    "</td></tr>";
+            }
+        } else {
+            echo "error";
+        }
+    }
+
+
+    public function admin_view_courses()
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT course_name FROM course";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr><td>" .
+                    $row['course_name'] .
+                    "</td></tr>";
+            }
+        } else {
+            echo "error";
+        }
+    }
+
+    public function get_course_name($id)
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT course_name FROM course WHERE course_id=" . $id;
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                return $row['course_name'];
+            }
+        } else {
+            echo "error";
+        }
+    }
+
+    public function admin_view_lecturer()
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT lecturer_name,lecturer_staff_no FROM lecturer";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr><td>" .
+                    $row['lecturer_name'] .
+                    "</td><td>" .
+                    $row['lecturer_staff_no'] .
+                    "</td><td>";
+            }
+        } else {
+            echo "error";
+        }
+    }
+
+    public function admin_view_units()
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT unit_name,unit_course,unit_lecturer FROM unit";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr><td>" .
+                    $row['unit_name'] .
+                    "</td><td>" .
+                    $this->get_course_name($row['unit_course']) .
+                    "</td><td>" .
+                    $this->get_lecturer_name($row['unit_lecturer']) .
+                    "</td></tr>";
+            }
+        } else {
+            echo "error";
+        }
+    }
 }

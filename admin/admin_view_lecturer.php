@@ -55,7 +55,8 @@ $aid = $_SESSION['aid'];
                         <a class="collapsible-header">Lecturer<i class="material-icons">arrow_drop_down</i></a>
                         <div class="collapsible-body">
                             <ul>
-                                <li><a href="admin_view_lecturer.php" style="background-color: #2196F3; color:  white;">View Lecturers</a></li>
+                                <li><a href="admin_view_lecturer.php" style="background-color: #2196F3; color:  white;">View
+                                        Lecturers</a></li>
                                 <li><a href="admin_add_lecturer.php">Add Lecturer</a></li>
                             </ul>
                         </div>
@@ -86,14 +87,17 @@ $aid = $_SESSION['aid'];
                 Lecturer</a>
         </div>
         <table>
+            <thead>
             <tr>
                 <th>Name</th>
                 <th>Staff No</th>
             </tr>
-            <tr>
-                <td>Nixon Amuomo</td>
-                <td>001567</td>
-            </tr>
+            </thead>
+            <tbody>
+            <?php
+            $xtray_functions->admin_view_lecturer();
+            ?>
+            </tbody>
         </table>
     </div>
 </main>

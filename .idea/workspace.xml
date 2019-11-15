@@ -2,31 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e3fab7c-5394-4a3f-9590-abd91e78bca2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin_add_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_add_course.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin_add_lecturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_add_lecturer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin_add_student.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_add_student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin_add_unit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_add_unit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/admin_view_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_view_course.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/admin_view_lecturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_view_lecturer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/admin_view_student.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_view_student.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/admin_view_unit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_view_unit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/ConnectionClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/FunctionClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/FunctionsClass.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecturer/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_add_assignments.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_add_assignments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_add_notes.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_add_notes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/FunctionClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/FunctionClass.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lecturer/lecturer_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_view_assignments.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_view_assignments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_view_notes.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_view_notes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/student_assignment.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_assignment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/student_assignment_submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_assignment_submit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/student_notes.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_notes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/student_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_profile.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +159,7 @@
       <workItem from="1573750915856" duration="2285000" />
       <workItem from="1573783137233" duration="15264000" />
       <workItem from="1573801779170" duration="25307000" />
-      <workItem from="1573833807131" duration="12167000" />
+      <workItem from="1573833807131" duration="15059000" />
     </task>
     <servers />
   </component>
