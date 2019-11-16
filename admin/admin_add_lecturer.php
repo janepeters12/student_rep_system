@@ -83,27 +83,42 @@ $aid = $_SESSION['aid'];
     <div class="no-pad-top section">
         <center>
             <div class="card blue" style="width: 50%;padding: 10%">
+                <?php
+                //logging in
+                if (isset($_POST['save'])) {
+                    $lname = $_POST['lname'];
+                    echo $lname;
+                    $staffno = $_POST['staffno'];
+                    echo $staffno;
+                    if (empty($lname) ||empty($staffno)) {
+                        echo "<div class='red white-text'>Input All Before Submitting</div>";
+                    } else {
+                        $xtray_functions->admin_add_lecturer($lname,$staffno);
+                    }
+                }
+                ?>
                 <div class="card-content center">
                     <div class="card-title white-text"  href="#" style="font-weight: bolder; ">Add Lecturer</div>
-                    <form>
+                    <form action="admin_add_lecturer.php" method="post">
                         <div class="row">
                             <div class=" input-field col s12 m12 l12">
                                 <i class="material-icons prefix white-text">account_circle</i>
-                                <input class="white-text" type="text" class="validate" id="name">
+                                <input class="white-text validate" type="text" name="lname" id="name" required>
                                 <label class="white-text" for="name">Name</label>
                             </div>
                             <div class=" input-field col s12 m12 l12">
                                 <i class="material-icons prefix white-text">credit_card</i>
-                                <input class="white-text" type="text" class="validate" id="regno">
-                                <label class="white-text" for="regno">Staff No</label>
+                                <input class="white-text validate" type="text" name="staffno" id="staffno" required>
+                                <label class="white-text" for="staffno">Staff No</label>
+                            </div>
+                            <div class="center">
+                                <button type="submit" name="save" class="btn white black-text"
+                                        style="font-weight: bolder; margin: 10%"> SAVE
+                                </button>
                             </div>
                     </form>
                 </div>
             </div>
-            <div class="center">
-                <a class="btn white black-text" href="admin_profile.php" style="font-weight: bolder; margin: 10%">Save</a>
-            </div>
-
         </center>
     </div>
 </main>

@@ -132,7 +132,6 @@ class FunctionClass
         }
     }
 
-
     public function admin_view_courses()
     {
         $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
@@ -225,7 +224,6 @@ class FunctionClass
             echo "No assignment";
         }
     }
-
 
     public function lecturer_view_notes()
     {
@@ -322,5 +320,161 @@ class FunctionClass
         }
     }
 
+    public function admin_add_course($cname)
+    {
+        $cname = strtoupper($cname);
+        $check_course_name = $this->check_course_name($cname);
+        if ($check_course_name === FALSE) {
+            $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+            $sql = "INSERT INTO course (course_name)VALUES ('" . $cname . "')";
 
+            if ($connection->query($sql) === TRUE) {
+                header("Location: admin_view_course.php");
+            } else {
+                echo "Error: " . $sql . "<br>" . $connection->error;
+            }
+        } else {
+            echo "<div class='red white-text'>Course Already Exists</div>";
+        }
+    }
+
+    public function admin_add_student($sname, $regno, $course)
+    {
+        $regno = strtoupper($regno);
+        $check_regno = $this->check_regno($regno);
+        if ($check_regno === FALSE) {
+            $password = $regno;
+            $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+            $sql = "INSERT INTO student (student_name,student_reg_no,student_password,student_course)VALUES ('" . $sname . "','" . $regno . "','" . $password . "','" . $course . "')";
+
+            if ($connection->query($sql) === TRUE) {
+                header("Location: admin_view_student.php");
+            } else {
+                echo "Error: " . $sql . "<br>" . $connection->error;
+            }
+        } else {
+            echo "<div class='red white-text'>Student Already Exists</div>";
+        }
+    }
+
+    public function admin_add_lecturer($lname, $staffno)
+    {
+        $staffno = strtoupper($staffno);
+        $check_staffno = $this->check_staffno($staffno);
+        if ($check_staffno === FALSE) {
+            $password = $staffno;
+            $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+            $sql = "INSERT INTO lecturer (lecturer_name,lecturer_staff_no,lecturer_password)VALUES ('" . $lname . "','" . $staffno . "','" . $password . "')";
+
+            if ($connection->query($sql) === TRUE) {
+                header("Location: admin_view_lecturer.php");
+            } else {
+                echo "Error: " . $sql . "<br>" . $connection->error;
+            }
+        } else {
+            echo "<div class='red white-text'>Lecturer Already Exists</div>";
+        }
+    }
+
+    public function admin_add_unit($uname, $course, $lecturer)
+    {
+        $uname = strtoupper($uname);
+        $uname = str_replace(' ', '', $uname);
+        $check_unit_name = $this->check_unit_name($uname);
+        if ($check_unit_name === FALSE) {
+            $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+            $sql = "INSERT INTO unit (unit_name,unit_course,unit_lecturer)VALUES ('" . $uname . "','" . $course . "','" . $lecturer . "')";
+
+            if ($connection->query($sql) === TRUE) {
+                header("Location: admin_view_unit.php");
+            } else {
+                echo "Error: " . $sql . "<br>" . $connection->error;
+            }
+        } else {
+            echo "<div class='red white-text'>Unit Already Exists</div>";
+        }
+    }
+
+    public function check_course_name($cname)
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT * FROM course WHERE course_name='" . $cname . "'";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
+    public function check_regno($regno)
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT * FROM student WHERE student_reg_no='" . $regno . "'";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
+    public function check_unit_name($uname)
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT * FROM unit WHERE unit_name='" . $uname . "'";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
+    public function check_staffno($staffno)
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT * FROM lecturer WHERE lecturer_staff_no='" . $staffno . "'";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
+    public function get_all_courses()
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT course_id,course_name FROM course";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                echo "<option value='" . $row['course_id'] .
+                    "'>" . $row['course_name'] .
+                    "</option>";
+            }
+        } else {
+            echo "error";
+        }
+    }
+
+    public function get_all_lectures()
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT lecturer_id,lecturer_name FROM lecturer";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                echo "<option value='" . $row['lecturer_id'] .
+                    "'>" . $row['lecturer_name'] .
+                    "</option>";
+            }
+        } else {
+            echo "error";
+        }
+
+    }
 }

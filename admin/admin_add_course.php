@@ -84,19 +84,34 @@ $aid = $_SESSION['aid'];
     <div class="no-pad-top section">
         <center>
             <div class="card blue" style="width: 75%;padding: 20px">
+                <?php
+                //logging in
+                if (isset($_POST['save'])) {
+                    $cname = $_POST['cname'];
+                    if (empty($cname)) {
+                        echo "<div class='red white-text'>Input Course Name Before Submitting</div>";
+                    } else {
+                        $xtray_functions->admin_add_course($cname);
+                    }
+                }
+                ?>
                 <div class="card-content center">
-                    <div class="card-title white-text" href="#" style="font-weight: bolder; ">Add Course</div>
+                    <div class="card-title white-text" style="font-weight: bolder; ">Add Course</div>
                 </div>
-                <div class="row">
-                    <div class=" input-field col s12 m12 l12">
-                        <i class="material-icons prefix white-text">school</i>
-                        <input class="white-text" type="text" class="validate" id="name">
-                        <label class="white-text" for="name">Name</label>
+                <form action="admin_add_course.php" method="post">
+                    <div class="row">
+                        <div class=" input-field col s12 m12 l12">
+                            <i class="material-icons prefix white-text">school</i>
+                            <input class="white-text validate" type="text" id="name" name="cname" required>
+                            <label class="white-text" for="name">Name</label>
+                        </div>
                     </div>
-                </div>
-                <div class="center">
-                    <a class="btn white black-text" href="admin_profile.php" style="font-weight: bolder; margin: 10%">Save</a>
-                </div>
+                    <div class="center">
+                        <button type="submit" name="save" class="btn white black-text"
+                                style="font-weight: bolder; margin: 10%"> SAVE
+                        </button>
+                    </div>
+                </form>
             </div>
         </center>
     </div>
