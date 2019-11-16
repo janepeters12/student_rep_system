@@ -47,26 +47,9 @@ $sid = $_SESSION['sid'];
     <div class="no-pad-top section">
         <center>
             <div class="row" style="width: 50%">
-                <div class="col s12 m12 l12 card blue">
-                    <div class="card-content center">
-                        <div class="card-title white-text" style="font-weight: bolder; ">COM 321</div>
-                        <p class="white-text">Date Due: 27 May 2019</p>
-                        <a class="btn white black-text" href="index.php"
-                           style="font-weight: bolder; margin: 10%">View</a>
-                        <a class="btn white black-text " href="student_assignment_submit.php"
-                           style="font-weight: bolder; margin: 10%">Submit</a>
-                    </div>
-                </div>
-                <div class="col s12 m12 l12 card blue">
-                    <div class="card-content center">
-                        <div class="card-title white-text" style="font-weight: bolder; ">COM 324</div>
-                        <p class="white-text">Date Due: 27 May 2019</p>
-                        <a class="btn white black-text" href="index.php"
-                           style="font-weight: bolder; margin: 10%">View</a>
-                        <a class="btn white black-text " href="student_assignment_submit.php"
-                           style="font-weight: bolder; margin: 10%">Submit</a>
-                    </div>
-                </div>
+                <?php
+                $xtray_functions->student_assignments();
+                ?>
             </div>
         </center>
 

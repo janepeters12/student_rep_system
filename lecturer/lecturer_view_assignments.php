@@ -48,7 +48,8 @@ $lid = $_SESSION['lid'];
                         <a class="collapsible-header">Assignments<i class="material-icons">arrow_drop_down</i></a>
                         <div class="collapsible-body">
                             <ul>
-                                <li><a href="lecturer_view_assignments.php" style="background-color: #2196F3">View Assignments</a></li>
+                                <li><a href="lecturer_view_assignments.php" style="background-color: #2196F3">View
+                                        Assignments</a></li>
                                 <li><a href="lecturer_add_assignments.php">Add Assignments</a></li>
                             </ul>
                         </div>
@@ -66,19 +67,22 @@ $lid = $_SESSION['lid'];
 <main>
     <div class="no-pad-top section">
         <div class="center">
-            <a class="btn white black-text" href="lecturer_add_assignments.php" style="font-weight: bolder; margin: 20px">Add Assisnments</a>
+            <a class="btn white black-text" href="lecturer_add_assignments.php"
+               style="font-weight: bolder; margin: 20px">Add Assisnments</a>
         </div>
         <table>
+            <thead>
             <tr>
                 <th>Unit</th>
                 <th>Date Uploaded</th>
                 <th>Due Date</th>
             </tr>
-            <tr>
-                <td>COM 313</td>
-                <td>12/9/2019</td>
-                <td>22/9/2019</td>
-            </tr>
+            </thead>
+            <tbody>
+            <?php
+            $xtray_functions->lecturer_view_assignments();
+            ?>
+            </tbody>
         </table>
     </div>
 </main>

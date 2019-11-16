@@ -18,8 +18,8 @@ class FunctionClass
         $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
 
         // Check connection
-        $success_start_tag = "<div class=\"white-text green\">";
-        $error_start_tag = "<div class=\"white-text red\">";
+        $success_start_tag = "<div class='white-text green'>";
+        $error_start_tag = "<div class='white-text red'>";
         $end_tag = "</div>";
         if (!$connection) {
             die($error_start_tag . "Connection failed: " . mysqli_connect_error()) . $end_tag;
@@ -204,4 +204,123 @@ class FunctionClass
             echo "error";
         }
     }
+
+    public function lecturer_view_assignments()
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT assignment_uni,assignment_date_uploaded,assignment_date_due FROM assignment";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr><td>" .
+                    $row['assignment_uni'] .
+                    "</td><td>" .
+                    $row['assignment_date_uploaded'] .
+                    "</td><td>" .
+                    $row['assignment_date_due'] .
+                    "</td></tr>";
+            }
+        } else {
+            echo "No assignment";
+        }
+    }
+
+
+    public function lecturer_view_notes()
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT notes_unit,notes_date_uploaded FROM notes";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr><td>" .
+                    $row['notes_unit'] .
+                    "</td><td>" .
+                    $row['notes_date_uploaded'] .
+                    "</td><td>";
+            }
+        } else {
+            echo "error";
+        }
+    }
+
+    public function student_notes()
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT notes_unit,notes_date_uploaded FROM notes";
+        $start_card = "<div class='col s12 m12 l12 card blue'>
+                        <div class='card-content center'>";
+
+        $end_card = "<a class='btn white black-text ' href='submitassignment.php'
+                     style='font-weight: bolder; margin: 10%'>Download</a>
+                     </div></div>";
+
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $dynamic_card = "<div class='card-title white-text' style='font-weight: bolder; '>" .
+                    $this->get_unit_name($row['notes_unit']) .
+                    "</div><p class='white-text'>Date Uploaded: " .
+                    $row['notes_date_uploaded'] .
+                    "</p>";
+                echo $start_card . $dynamic_card . $end_card;
+            }
+        } else {
+            echo "error";
+        }
+
+    }
+
+    public function student_assignments()
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT assignment_uni,assignment_date_due FROM assignment";
+        $start_card = "<div class='col s12 m12 l12 card blue'>
+                        <div class='card-content center'>";
+
+        $end_card = "<a class='btn white black-text' href='index.php'
+                     style='font-weight: bolder; margin: 10%'>View</a>
+                     <a class='btn white black-text ' href='student_assignment_submit.php'
+                     style='font-weight: bolder; margin: 10%'>Submit</a>
+                     </div>
+                     </div>";
+
+
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $dynamic_card = "<div class='card-title white-text' style='font-weight: bolder; '>" .
+                    $this->get_unit_name($row['assignment_uni']) .
+                    "</div><p class='white-text'>Date Uploaded: " .
+                    $row['assignment_date_due'] .
+                    "</p>";
+                echo $start_card . $dynamic_card . $end_card;
+
+            }
+        } else {
+            echo "error";
+        }
+
+    }
+
+    public function get_unit_name($id)
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "SELECT unit_name FROM unit WHERE unit_id=" . $id;
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                return $row['unit_name'];
+            }
+        } else {
+            echo "error";
+        }
+    }
+
+
 }

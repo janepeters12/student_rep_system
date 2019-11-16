@@ -69,14 +69,17 @@ $lid = $_SESSION['lid'];
             <a class="btn white black-text" href="lecturer_add_notes.php" style="font-weight: bolder; margin: 20px">Add Notes</a>
         </div>
         <table>
+            <thead>
             <tr>
                 <th>Date Uploaded</th>
                 <th>Unit</th>
             </tr>
-            <tr>
-                <td>12/9/2019</td>
-                <td>COM 313</td>
-            </tr>
+            </thead>
+            <tbody>
+            <?php
+            $xtray_functions->lecturer_view_notes();
+            ?>
+            </tbody>
         </table>
     </div>
 </main>
