@@ -67,9 +67,18 @@ $lid = $_SESSION['lid'];
 <main>
     <div class="no-pad-top section">
         <div class="center">
+            <h5 class="white-text red">
+                <?php
+                if (isset($_POST['delete'])) {
+                    $rid = $_POST['rid'];
+                    $xtray_functions->delete_assignments($rid);
+                }
+                ?>
+            </h5>
             <a class="btn white black-text" href="lecturer_add_assignments.php"
                style="font-weight: bolder; margin: 20px">Add Assisnments</a>
         </div>
+        <form method = "post" action = "lecturer_view_assignments.php">
         <table>
             <h5>LECTURER UPlOADED ASSIGNMENTS</h5>
             <thead>
@@ -86,6 +95,7 @@ $lid = $_SESSION['lid'];
             ?>
             </tbody>
         </table>
+        </form>
         <br>
         <table>
             <h5>STUDENT SUBMITTED ASSIGNMENTS</h5>

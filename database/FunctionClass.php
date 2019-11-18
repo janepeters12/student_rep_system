@@ -112,7 +112,7 @@ class FunctionClass
     public function admin_view_students()
     {
         $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
-        $sql = "SELECT student_name,student_reg_no,student_course FROM student";
+        $sql = "SELECT student_id,student_name,student_reg_no,student_course FROM student";
         $result = $connection->query($sql);
         if ($result->num_rows > 0) {
             // output data of each row
@@ -123,27 +123,33 @@ class FunctionClass
                     $row['student_reg_no'] .
                     "</td><td>" .
                     $this->get_course_name($row['student_course']) .
+                    "</td><td>" .
+                    "<input hidden name = 'rid' type = 'text'  value = '" . $row['student_id'] . "'>" .
+                    "<button name = 'delete' type = 'submit' class='btn red white-text'>DELETE</button>" .
                     "</td></tr>";
             }
         } else {
-            echo "error";
+            echo "No Students";
         }
     }
 
     public function admin_view_courses()
     {
         $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
-        $sql = "SELECT course_name FROM course";
+        $sql = "SELECT course_id,course_name FROM course";
         $result = $connection->query($sql);
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
                 echo "<tr><td>" .
                     $row['course_name'] .
+                    "</td><td>" .
+                    "<input hidden name = 'rid' type = 'text'  value = '" . $row['course_id'] . "'>" .
+                    "<button name = 'delete' type = 'submit' class='btn red white-text'>DELETE</button>" .
                     "</td></tr>";
             }
         } else {
-            echo "error";
+            echo "No Courses";
         }
     }
 
@@ -165,7 +171,7 @@ class FunctionClass
     public function admin_view_lecturer()
     {
         $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
-        $sql = "SELECT lecturer_name,lecturer_staff_no FROM lecturer";
+        $sql = "SELECT lecturer_id,lecturer_name,lecturer_staff_no FROM lecturer";
         $result = $connection->query($sql);
         if ($result->num_rows > 0) {
             // output data of each row
@@ -174,17 +180,20 @@ class FunctionClass
                     $row['lecturer_name'] .
                     "</td><td>" .
                     $row['lecturer_staff_no'] .
-                    "</td><td>";
+                    "</td><td>" .
+                    "<input hidden name = 'rid' type = 'text'  value = '" . $row['lecturer_id'] . "'>" .
+                    "<button name = 'delete' type = 'submit' class='btn red white-text'>DELETE</button>" .
+                    "</td></tr>";
             }
         } else {
-            echo "error";
+            echo "No Lecture";
         }
     }
 
     public function admin_view_units()
     {
         $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
-        $sql = "SELECT unit_name,unit_course,unit_lecturer FROM unit";
+        $sql = "SELECT unit_id,unit_name,unit_course,unit_lecturer FROM unit";
         $result = $connection->query($sql);
         if ($result->num_rows > 0) {
             // output data of each row
@@ -195,10 +204,13 @@ class FunctionClass
                     $this->get_course_name($row['unit_course']) .
                     "</td><td>" .
                     $this->get_lecturer_name($row['unit_lecturer']) .
+                    "</td><td>" .
+                    "<input hidden name = 'rid' type = 'text'  value = '" . $row['unit_id'] . "'>" .
+                    "<button name = 'delete' type = 'submit' class='btn red white-text'>DELETE</button>" .
                     "</td></tr>";
             }
         } else {
-            echo "error";
+            echo "No Units";
         }
     }
 
@@ -222,8 +234,8 @@ class FunctionClass
                             // output data of each row
                             while ($row = $stu_ass_result->fetch_assoc()) {
                                 $sn = $this->get_student_name($row['student_assignment_student']);
-                                $check_lec_unit = $this->check_lec_unit($lid,$ass_row['assignment_uni']);
-                                if($check_lec_unit == "TRUE") {
+                                $check_lec_unit = $this->check_lec_unit($lid, $ass_row['assignment_uni']);
+                                if ($check_lec_unit == "TRUE") {
                                     echo "<tr><td>" .
                                         $this->get_unit_name($ass_row['assignment_uni']) .
                                         "</td><td>" .
@@ -253,13 +265,13 @@ class FunctionClass
         if ($unit_result->num_rows > 0) {
             // output data of each row
             while ($unit_row = $unit_result->fetch_assoc()) {
-                $notes_sql = "SELECT notes_unit,notes_date_uploaded,file FROM notes WHERE notes_unit='" . $unit_row['unit_id'] . "'";
+                $notes_sql = "SELECT notes_id,notes_unit,notes_date_uploaded,file FROM notes WHERE notes_unit='" . $unit_row['unit_id'] . "'";
                 $notes_result = $connection->query($notes_sql);
                 if ($notes_result->num_rows > 0) {
                     // output data of each row
                     while ($notes_row = $notes_result->fetch_assoc()) {
-                        $check_lec_unit = $this->check_lec_unit($lid,$notes_row['notes_unit']);
-                        if($check_lec_unit == "TRUE") {
+                        $check_lec_unit = $this->check_lec_unit($lid, $notes_row['notes_unit']);
+                        if ($check_lec_unit == "TRUE") {
                             echo "<tr><td>" .
                                 $this->get_unit_name($notes_row['notes_unit']) .
                                 "</td><td>" .
@@ -267,7 +279,10 @@ class FunctionClass
                                 "</td><td>" .
                                 "</p><a class='btn white black-text' href='" . $notes_row['file'] .
                                 "' style='font-weight: bolder;'>Download</a>" .
-                                "</td><td>";
+                                "</td><td>" .
+                                "<input hidden name = 'rid' type = 'text'  value = '" . $notes_row['notes_id'] . "'>" .
+                                "<button name = 'delete' type = 'submit' class='btn red white-text'>DELETE</button>" .
+                                "</td></tr>";
                         }
                     }
                 }
@@ -275,10 +290,10 @@ class FunctionClass
         }
     }
 
-    public function check_lec_unit($lid,$uid)
+    public function check_lec_unit($lid, $uid)
     {
         $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
-        $sql = "SELECT * FROM unit WHERE unit_lecturer='" . $lid."' AND unit_id='".$uid."'";
+        $sql = "SELECT * FROM unit WHERE unit_lecturer='" . $lid . "' AND unit_id='" . $uid . "'";
         $result = $connection->query($sql);
         if ($result->num_rows > 0) {
             return "TRUE";
@@ -297,24 +312,27 @@ class FunctionClass
             // output data of each row
             while ($unit_row = $unit_result->fetch_assoc()) {
 
-                $ass_sql = "SELECT assignment_uni,assignment_date_uploaded,assignment_date_due,file FROM lec_assignment WHERE assignment_uni='" . $unit_row['unit_id'] . "'";
+                $ass_sql = "SELECT assignment_id,assignment_uni,assignment_date_uploaded,assignment_date_due,file FROM lec_assignment WHERE assignment_uni='" . $unit_row['unit_id'] . "'";
                 $ass_result = $connection->query($ass_sql);
                 if ($ass_result->num_rows > 0) {
                     // output data of each row
                     while ($row = $ass_result->fetch_assoc()) {
-                        $check_lec_unit = $this->check_lec_unit($lid,$row['assignment_uni']);
-                            if($check_lec_unit == "TRUE") {
-                                echo "<tr><td>" .
-                                    $this->get_unit_name($row['assignment_uni']) .
-                                    "</td><td>" .
-                                    $row['assignment_date_uploaded'] .
-                                    "</td><td>" .
-                                    $row['assignment_date_due'] .
-                                    "</td><td>" .
-                                    "<a class='btn white black-text' href='" . $row['file'] .
-                                    "' style='font-weight: bolder;'>Download</a>" .
-                                    "</td></tr>";
-                            }
+                        $check_lec_unit = $this->check_lec_unit($lid, $row['assignment_uni']);
+                        if ($check_lec_unit == "TRUE") {
+                            echo "<tr><td>" .
+                                $this->get_unit_name($row['assignment_uni']) .
+                                "</td><td>" .
+                                $row['assignment_date_uploaded'] .
+                                "</td><td>" .
+                                $row['assignment_date_due'] .
+                                "</td><td>" .
+                                "<a class='btn white black-text' href='" . $row['file'] .
+                                "' style='font-weight: bolder;'>Download</a>" .
+                                "</td><td>" .
+                                "<input hidden  name = 'rid' type = 'text'  value = '" . $row['assignment_id'] . "'>" .
+                                "<button name = 'delete' type = 'submit' class='btn red white-text'>DELETE</button>" .
+                                "</td></tr>";
+                        }
                     }
                 }
 
@@ -700,6 +718,78 @@ class FunctionClass
 
         } else {
             print_r($errors);
+        }
+    }
+
+    public function delete_student($rid)
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "DELETE FROM student WHERE student_id='" . $rid . "'";
+
+        if ($connection->query($sql) === TRUE) {
+            echo "Student deleted successfully";
+        } else {
+            echo "Error deleting student: " . $connection->error;
+        }
+    }
+
+    public function delete_lecturer($rid)
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "DELETE FROM lecturer WHERE lecturer_id='" . $rid . "'";
+
+        if ($connection->query($sql) === TRUE) {
+            echo "Lecturer deleted successfully";
+        } else {
+            echo "Error deleting lecturer: " . $connection->error;
+        }
+    }
+
+    public function delete_unit($rid)
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "DELETE FROM unit WHERE unit_id='" . $rid . "'";
+
+        if ($connection->query($sql) === TRUE) {
+            echo "Unit deleted successfully";
+        } else {
+            echo "Error deleting unit: " . $connection->error;
+        }
+    }
+
+    public function delete_course($rid)
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "DELETE FROM course WHERE course_id='" . $rid . "'";
+
+        if ($connection->query($sql) === TRUE) {
+            echo "Course deleted successfully";
+        } else {
+            echo "Error deleting course: " . $connection->error;
+        }
+    }
+
+    public function delete_notes($rid)
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "DELETE FROM notes WHERE notes_id='" . $rid . "'";
+
+        if ($connection->query($sql) === TRUE) {
+            echo "Notes deleted successfully";
+        } else {
+            echo "Error deleting notes: " . $connection->error;
+        }
+    }
+
+    public function delete_assignments($rid)
+    {
+        $connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+        $sql = "DELETE FROM lec_assignment WHERE assignment_id='" . $rid . "'";
+
+        if ($connection->query($sql) === TRUE) {
+            echo "Assignments deleted successfully";
+        } else {
+            echo "Error deleting assignments: " . $connection->error;
         }
     }
 }

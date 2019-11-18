@@ -3,25 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3e3fab7c-5394-4a3f-9590-abd91e78bca2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about_us.php" beforeDir="false" afterPath="$PROJECT_DIR$/about_us.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin_add_unit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_add_unit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/1student.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/1student.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/SAR.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/books.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/books.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bookswithcap.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/bookswithcap.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/jquery-1.10.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/materialize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/students.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/students.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin_view_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_view_course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin_view_lecturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_view_lecturer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin_view_student.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_view_student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin_view_unit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_view_unit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/FunctionClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/FunctionClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_add_assignments.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_add_assignments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_add_notes.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_add_notes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lecturer/lecturer_view_assignments.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_view_assignments.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lecturer/lecturer_view_notes.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_view_notes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/student_assignment.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_assignment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/student_assignment_submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_assignment_submit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/student_notes.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_notes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/student/student_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_profile.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +92,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../valtage" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -178,7 +167,7 @@
       <workItem from="1573913250101" duration="3778000" />
       <workItem from="1573968075410" duration="12295000" />
       <workItem from="1574051055129" duration="3554000" />
-      <workItem from="1574069948244" duration="19498000" />
+      <workItem from="1574069948244" duration="24062000" />
     </task>
     <servers />
   </component>

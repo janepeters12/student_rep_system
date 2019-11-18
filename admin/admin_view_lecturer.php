@@ -83,9 +83,18 @@ $aid = $_SESSION['aid'];
 <main>
     <div class="no-pad-top section">
         <div class="center">
+            <h5 class="white-text red">
+                <?php
+                if (isset($_POST['delete'])) {
+                    $rid = $_POST['rid'];
+                    $xtray_functions->delete_lecturer($rid);
+                }
+                ?>
+            </h5>
             <a class="btn white black-text" href="admin_add_lecturer.php" style="font-weight: bolder; margin: 20px">Add
                 Lecturer</a>
         </div>
+        <form method = "post" action = "admin_view_lecturer.php">
         <table>
             <thead>
             <tr>
@@ -99,6 +108,7 @@ $aid = $_SESSION['aid'];
             ?>
             </tbody>
         </table>
+        </form>
     </div>
 </main>
 

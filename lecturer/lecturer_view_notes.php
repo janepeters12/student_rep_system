@@ -39,7 +39,8 @@ $lid = $_SESSION['lid'];
                         <a class="collapsible-header">Notes<i class="material-icons">arrow_drop_down</i></a>
                         <div class="collapsible-body">
                             <ul>
-                                <li><a href="lecturer_view_notes.php" style="background-color: #2196F3">View Notes</a></li>
+                                <li><a href="lecturer_view_notes.php" style="background-color: #2196F3">View Notes</a>
+                                </li>
                                 <li><a href="lecturer_add_notes.php">Add Notes</a></li>
                             </ul>
                         </div>
@@ -66,22 +67,33 @@ $lid = $_SESSION['lid'];
 <main>
     <div class="no-pad-top section">
         <div class="center">
-            <a class="btn white black-text" href="lecturer_add_notes.php" style="font-weight: bolder; margin: 20px">Add Notes</a>
+            <h5 class="white-text red">
+                <?php
+                if (isset($_POST['delete'])) {
+                    $rid = $_POST['rid'];
+                    $xtray_functions->delete_notes($rid);
+                }
+                ?>
+            </h5>
+            <a class="btn white black-text" href="lecturer_add_notes.php" style="font-weight: bolder; margin: 20px">Add
+                Notes</a>
         </div>
-        <table>
-            <thead>
-            <tr>
-                <th>Unit</th>
-                <th>Date Uploaded</th>
-                <th>Download</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-            $xtray_functions->lecturer_view_notes($lid);
-            ?>
-            </tbody>
-        </table>
+        <form method="post" action="lecturer_view_notes.php">
+            <table>
+                <thead>
+                <tr>
+                    <th>Unit</th>
+                    <th>Date Uploaded</th>
+                    <th>Download</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                $xtray_functions->lecturer_view_notes($lid);
+                ?>
+                </tbody>
+            </table>
+        </form>
     </div>
 </main>
 
