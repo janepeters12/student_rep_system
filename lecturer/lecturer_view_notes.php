@@ -71,13 +71,14 @@ $lid = $_SESSION['lid'];
         <table>
             <thead>
             <tr>
-                <th>Date Uploaded</th>
                 <th>Unit</th>
+                <th>Date Uploaded</th>
+                <th>Download</th>
             </tr>
             </thead>
             <tbody>
             <?php
-            $xtray_functions->lecturer_view_notes();
+            $xtray_functions->lecturer_view_notes($lid);
             ?>
             </tbody>
         </table>

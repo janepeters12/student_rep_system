@@ -3,8 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="3e3fab7c-5394-4a3f-9590-abd91e78bca2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin_add_course.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_add_course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about_us.php" beforeDir="false" afterPath="$PROJECT_DIR$/about_us.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin_add_unit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_add_unit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/1student.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/1student.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/SAR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/books.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/books.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bookswithcap.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/bookswithcap.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/jquery-1.10.2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/materialize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/students.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/students.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/FunctionClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/FunctionClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_add_assignments.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_add_assignments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_add_notes.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_add_notes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_view_assignments.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_view_assignments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturer/lecturer_view_notes.php" beforeDir="false" afterPath="$PROJECT_DIR$/lecturer/lecturer_view_notes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/student_assignment.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_assignment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/student_assignment_submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_assignment_submit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/student_notes.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_notes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/student/student_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/student/student_profile.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +66,21 @@
         <item name="xtray@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="xtray: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="course: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="lec_assignment: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="xtray@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="xtray: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="notes: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="xtray@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="xtray: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="student_assignment: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -73,22 +104,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../valtage" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\laragon\www\jpp\assets\js" />
-      <recent name="D:\laragon\www\jpp\assets\css" />
-      <recent name="D:\laragon\www\jpp\assets" />
-      <recent name="D:\laragon\www\jpp\admin" />
-      <recent name="D:\laragon\www\jpp\student" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\laragon\www\jpp\student" />
       <recent name="D:\laragon\www\jpp\lecturer" />
       <recent name="D:\laragon\www\jpp\admin" />
       <recent name="D:\laragon\www\jpp\assets\js" />
       <recent name="D:\laragon\www\jpp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\jpp\assets\images" />
+      <recent name="D:\laragon\www\jpp\assets\js" />
+      <recent name="D:\laragon\www\jpp\assets\css" />
+      <recent name="D:\laragon\www\jpp\assets" />
+      <recent name="D:\laragon\www\jpp\admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -107,7 +138,12 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3d478e33" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -138,6 +174,11 @@
       <workItem from="1573801779170" duration="25307000" />
       <workItem from="1573833807131" duration="17265000" />
       <workItem from="1573877945069" duration="5543000" />
+      <workItem from="1573883745198" duration="16785000" />
+      <workItem from="1573913250101" duration="3778000" />
+      <workItem from="1573968075410" duration="12295000" />
+      <workItem from="1574051055129" duration="3554000" />
+      <workItem from="1574069948244" duration="19498000" />
     </task>
     <servers />
   </component>

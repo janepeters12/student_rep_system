@@ -4,6 +4,7 @@ session_start();
 require('../database/FunctionClass.php');
 $xtray_functions = new FunctionClass();
 $sid = $_SESSION['sid'];
+$ass = $_GET['ass']
 ?>
 
 <!DOCTYPE html>
@@ -46,17 +47,40 @@ $sid = $_SESSION['sid'];
 <main>
     <div class="no-pad-top section">
         <center>
-            <div class="card blue" style="width: 50%;padding: 15%">
-                <div class="card-content center">
-                    <div class="card-title white-text"  href="#" style="font-weight: bolder; ">ASSIGNMENT</div>
-                    <form>
-                        <div class="row center">
-                            <div class=" input-field col s12 m12 l12">
-                                <input type="file" class="validate" id="choose file">
-                            </div>
-                            <a class="btn white black-text " href="student_assignment_submit.php"
-                               style="font-weight: bolder; margin: 10%">Submit</a>
+            <div class="card blue" style="width: 75%;padding: 20px">
+                <?php
+                //logging in
+                if (isset($_POST['save'])) {
+                    $file = $_FILES['file'];
+                    $file_name = $_FILES['file']['name'];
+                    $file_size =$_FILES['file']['size'];
+                    $file_tmp =$_FILES['file']['tmp_name'];
+                    $file_type=$_FILES['file']['type'];
 
+                    if (empty($file_name) ||empty($ass)) {
+                        echo "<div class='red white-text'>Input All Before Submitting</div>";
+                    } else {
+                        $check_ass_submission = $xtray_functions->check_ass_submission($sid,$ass);
+                        if ($check_ass_submission == "TRUE") {
+                            $xtray_functions->submit_assignment($ass, $file_name, $file_size, $file_tmp, $sid);
+                        } else{
+                            echo "<div class='red white-text'>Assignment Already Submitted</div>";
+                        }
+                    }
+                }
+                ?>
+                <div class="card-content center">
+                    <div class="card-title white-text" style="font-weight: bolder; ">ASSIGNMENT</div>
+                    <form action="student_assignment_submit.php?ass=<?php echo $ass;?>" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class=" input-field col s12 m12 l12">
+                                <input name="file" type="file" class="validate" accept=".xlsx,.xls,.doc, .docx,.ppt, .pptx,.txt,.pdf" required>
+                            </div>
+                            <div class="center">
+                                <button type="submit" name="save" class="btn white black-text"
+                                        style="font-weight: bolder; margin: 10%"> SAVE
+                                </button>
+                            </div>
                         </div>
                     </form>
 

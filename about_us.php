@@ -49,13 +49,13 @@
    </nav>
    <div class="col s12 m6 l6">
    <h5><i>Time For Better Results</i></h5>
-   <img class="responsive-img circle" src="assets/books.jpg" alt="">
-   <img class="responsive-img circle right" src="assets/books.jpg" alt="">
+   <img class="responsive-img circle" src="assets/images/books.jpg" alt="">
+   <img class="responsive-img circle right" src="assets/images/books.jpg" alt="">
     <div class="carousel" data-indicator="true">
-      <a class="carousel item" href="#one"><img src="assets/bookswithcap.jpg"></a>
-      <a class="carousel item" href="#one"><img src="assets/students.jpg"></a>
-      <a class="carousel item" href="#one"><img src="assets/1student.jpg"></a>
-      <a class="carousel item" href="#one"><img src="assets/books.jpg"></a>
+      <a class="carousel item" href="#one"><img src="assets/images/bookswithcap.jpg"></a>
+      <a class="carousel item" href="#one"><img src="assets/images/students.jpg"></a>
+      <a class="carousel item" href="#one"><img src="assets/images/1student.jpg"></a>
+      <a class="carousel item" href="#one"><img src="assets/images/books.jpg"></a>
     </div>
    
 
@@ -74,9 +74,9 @@
    <!-- login buttons card -->
   
     <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="assets/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
-    <script src="assets/SAR.js"></script>
+    <script src="assets/js/xtray.js"></script>
     
   </body>
 </html>

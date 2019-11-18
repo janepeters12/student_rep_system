@@ -66,19 +66,53 @@ $lid = $_SESSION['lid'];
 <main>
     <div class="no-pad-top section">
         <center>
-            <div class="card blue" style="width: 50%;padding: 15%">
+            <div class="card blue" style="width: 75%;padding: 15%">
+                <?php
+                //logging in
+                if (isset($_POST['save'])) {
+                    $file = $_FILES['file'];
+                    $unit = $_POST['unit'];
+                    $file_name = $_FILES['file']['name'];
+                    $file_size =$_FILES['file']['size'];
+                    $file_tmp =$_FILES['file']['tmp_name'];
+                    $file_type=$_FILES['file']['type'];
+
+                    if (empty($file_name) ||empty($unit)) {
+                        echo "<div class='red white-text'>Input All Before Submitting</div>";
+                    } else {
+                        $xtray_functions->add_notes($unit,$file_name,$file_size,$file_tmp);
+                    }
+                }
+                ?>
+
                 <div class="card-content center">
                     <div class="card-title white-text"  href="#" style="font-weight: bolder; ">NOTES</div>
-                    <form>
+                    <form action="lecturer_add_notes.php" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class=" input-field col s12 m12 l12">
-                                <input type="file" class="validate" id="choose file">
-
+                                <input name="file" type="file" class="validate" accept=".xlsx,.xls,.doc, .docx,.ppt, .pptx,.txt,.pdf" required>
                             </div>
-
+                            <div class=" input-field col s12 m12 l12">
+                                <div class="row">
+                                    <div class="col s3 m3 l3">
+                                        <i class="material-icons prefix white-text">school</i>
+                                    </div>
+                                    <div class="col s9 m9 l9">
+                                        <select class="validate" name="unit" required>
+                                            <option value="" disabled selected>Unit</option>
+                                            <?php
+                                            $xtray_functions->get_lecturer_units($lid);
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center">
+                                <button type="submit" name="save" class="btn white black-text"
+                                        style="font-weight: bolder; margin: 10%"> SAVE
+                                </button>
+                            </div>
                         </div>
-                        <div class="center">
-                            <a class="btn white black-text" href="lecturer_dash.php" style="font-weight: bolder; margin: 10%"> Save</a>
                         </div>
                     </form>
 

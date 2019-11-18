@@ -71,19 +71,39 @@ $lid = $_SESSION['lid'];
                style="font-weight: bolder; margin: 20px">Add Assisnments</a>
         </div>
         <table>
+            <h5>LECTURER UPlOADED ASSIGNMENTS</h5>
             <thead>
             <tr>
                 <th>Unit</th>
                 <th>Date Uploaded</th>
                 <th>Due Date</th>
+                <th>Download</th>
             </tr>
             </thead>
             <tbody>
             <?php
-            $xtray_functions->lecturer_view_assignments();
+            $xtray_functions->lecturer_view_assignments($lid);
             ?>
             </tbody>
         </table>
+        <br>
+        <table>
+            <h5>STUDENT SUBMITTED ASSIGNMENTS</h5>
+            <thead>
+            <tr>
+                <th>Unit</th>
+                <th>Student</th>
+                <th>Date Uploaded</th>
+                <th>Download</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            $xtray_functions->lecturer_view_submitted_assignments($lid);
+            ?>
+            </tbody>
+        </table>
+
     </div>
 </main>
 

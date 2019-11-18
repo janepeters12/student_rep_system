@@ -131,7 +131,7 @@ $aid = $_SESSION['aid'];
                                         <select class="validate" name="lecturer" required>
                                             <option value="" disabled selected>Lecturer</option>
                                             <?php
-                                            $xtray_functions->get_all_lectures();
+                                            $xtray_functions->get_all_lecturers();
                                             ?>
                                         </select>
                                     </div>

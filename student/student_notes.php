@@ -48,7 +48,7 @@ $sid = $_SESSION['sid'];
         <center>
             <div class="row" style="width: 50%">
                 <?php
-                $xtray_functions->student_notes();
+                $xtray_functions->student_notes($sid);
                 ?>
             </div>
         </center>

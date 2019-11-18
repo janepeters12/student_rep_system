@@ -50,7 +50,7 @@ $sid = $_SESSION['sid'];
                     <div class="card-content center">
                         <div class="white-text" style="font-weight: bolder; ">Welcome
                             <?php
-                            $xtray_functions->get_student_name($sid);
+                           echo $xtray_functions->get_student_name($sid);
                             ?>
                         </div>
                     </div>
