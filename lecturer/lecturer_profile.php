@@ -30,35 +30,14 @@ $lid = $_SESSION['lid'];
                 </a>
             </li>
             <li class="white"> &nbsp;</li>
-            <li><a href="lecturer_profile.php" class="white-text center" style="background-color: #2196F3">Profile</a>
-            </li>
-            <li class="no-padding">
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="collapsible-header">Notes<i class="material-icons">arrow_drop_down</i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="lecturer_view_notes.php">View Notes</a></li>
-                                <li><a href="lecturer_add_notes.php">Add Notes</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="collapsible-header">Assignments<i class="material-icons">arrow_drop_down</i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="lecturer_view_assignments.php">View Assignments</a></li>
-                                <li><a href="lecturer_add_assignments.php">Add Assignments</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="btn btn-block white" style="margin: 10px">
-                            <a href="../index.php" class="black-text center">Log Out</a>
-                        </div>
-                    </li>
-                </ul>
-            </li>
+            <li><a href="lecturer_profile.php" class="white-text center" style="background-color: #2196F3">Profile</a></li>
+            <li><a href="lecturer_view_notes.php">View Notes</a></li>
+            <li><a href="lecturer_add_notes.php">Add Notes</a></li>
+            <li><a href="lecturer_view_assignments.php">View Assignments</a></li>
+            <li><a href="lecturer_add_assignments.php">Add Assignments</a></li>
+            <div class="btn btn-block white" style="margin: 10px">
+                <a href="../index.php" class="black-text center">Log Out</a>
+            </div>
         </ul>
     </div>
 </header>

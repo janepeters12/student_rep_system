@@ -31,50 +31,18 @@ $aid = $_SESSION['aid'];
             </li>
             <li class="white"> &nbsp;</li>
             <li><a href="admin_profile.php" class="white-text center" style="background-color: #2196F3">Profile</a></li>
-            <li class="no-padding">
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="collapsible-header">Student<i class="material-icons">arrow_drop_down</i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="admin_view_student.php">View Students</a></li>
-                                <li><a href="admin_add_student.php">Add Student</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="collapsible-header">Course<i class="material-icons">arrow_drop_down</i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="admin_view_course.php">View Courses</a></li>
-                                <li><a href="admin_add_course.php">Add Course</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="collapsible-header">Lecturer<i class="material-icons">arrow_drop_down</i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="admin_view_lecturer.php">View Lecturers</a></li>
-                                <li><a href="admin_add_lecturer.php">Add Lecturer</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="collapsible-header">Units<i class="material-icons">arrow_drop_down</i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="admin_view_unit.php">View Units</a></li>
-                                <li><a href="admin_add_unit.php">Add Unit</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="btn btn-block white" style="margin: 10px">
-                            <a href="../index.php" class="black-text center">Log Out</a>
-                        </div>
-                    </li>
-                </ul>
+            <li><a href="admin_view_student.php">View Students</a></li>
+            <li><a href="admin_add_student.php">Add Student</a></li>
+            <li><a href="admin_view_course.php">View Courses</a></li>
+            <li><a href="admin_add_course.php">Add Course</a></li>
+            <li><a href="admin_view_lecturer.php">View Lecturers</a></li>
+            <li><a href="admin_add_lecturer.php">Add Lecturer</a></li>
+            <li><a href="admin_view_unit.php">View Units</a></li>
+            <li><a href="admin_add_unit.php">Add Unit</a></li>
+            <li>
+                <div class="btn btn-block white" style="margin: 10px">
+                    <a href="../index.php" class="black-text center">Log Out</a>
+                </div>
             </li>
         </ul>
     </div>

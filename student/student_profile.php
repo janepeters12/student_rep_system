@@ -32,8 +32,8 @@ $sid = $_SESSION['sid'];
             <li class="white"> &nbsp;</li>
             <li><a href="student_profile.php" class="white-text center" style="background-color: #2196F3">Profile</a>
             </li>
-            <li><a href="student_notes.php" class="white-text center">Notes</a></li>
-            <li><a href="student_assignment.php" class="white-text center">Assignments</a></li>
+            <li><a href="student_notes.php">Notes</a></li>
+            <li><a href="student_assignment.php">Assignments</a></li>
             <li>
                 <div class="btn btn-block white" style="margin: 10px">
                     <a href="../index.php" class="black-text center">Log Out</a>

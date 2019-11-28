@@ -24,9 +24,6 @@ $xtray_functions = new FunctionClass();
         <a href="../index.php" class="brand-logo">
             <img alt="xtray" src="../assets/images/logo.png">
         </a>
-        <ul class="right">
-            <li><a href="../about_us.php"><i class="material-icons left">info</i>About us</a></li>
-        </ul>
     </div>
 </nav>
 

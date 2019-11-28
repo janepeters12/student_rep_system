@@ -393,7 +393,7 @@ class FunctionClass
                 }
             }
         } else {
-            echo "error";
+            echo "No Notes";
         }
 
     }
@@ -437,7 +437,7 @@ class FunctionClass
                 }
             }
         } else {
-            echo "error";
+            echo "No Assignments";
         }
 
     }
